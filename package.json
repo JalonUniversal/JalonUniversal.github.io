@@ -1,5 +1,6 @@
 {
   "name": "github-demo",
+  "homepage": "https://JalonUniversal.github.io/github-demo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
