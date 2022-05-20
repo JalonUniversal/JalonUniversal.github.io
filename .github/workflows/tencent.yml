@@ -16,7 +16,6 @@ jobs:
         echo pwd
 
     - name: Deploy To Tecent Axzure
-      run: echo pwd
       uses: srueda99/scp-action@v12
       with:
           origin: ./build/*
