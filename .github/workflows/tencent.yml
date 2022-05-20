@@ -19,6 +19,6 @@ jobs:
       with:
           port: 22
           host: ${{ secrets.SERVER_HOST }}
-          destination: "/home/${{ secrets.SERVER_FOLDER }}/"
+          destination: "${{ secrets.SERVER_FOLDER }}/"
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
