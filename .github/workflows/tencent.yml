@@ -17,8 +17,9 @@ jobs:
     - name: Deploy To Tecent Axzure
       uses: srueda99/scp-action@v12
       with:
+          origin: ./build/*
           port: 22
           host: ${{ secrets.SERVER_HOST }}
-          destination: "${{ secrets.SERVER_FOLDER }}/"
+          destination: "/home/${{ secrets.SERVER_FOLDER }}/"
           username: ${{ secrets.SERVER_USERNAME }}
           password: ${{ secrets.SERVER_PASSWORD }}
