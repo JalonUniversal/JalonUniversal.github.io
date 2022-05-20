@@ -11,9 +11,8 @@ jobs:
 
     - name: Install and Build
       run: |
-        npm install
-        npm run build
-        echo $GITHUB_WORKSPACE
+        yarn
+        yarn build
 
     - name: Deploy To Tecent Axzure
       uses: mdallasanta/ssh-scp-deploy@v1.2.0
