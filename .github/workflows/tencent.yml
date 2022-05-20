@@ -16,7 +16,7 @@ jobs:
         echo $GITHUB_WORKSPACE
 
     - name: Deploy To Tecent Axzure
-      uses: mdallasanta/ssh-scp-deploy@1.2.0
+      uses: mdallasanta/ssh-scp-deploy@v1.2.0
       with:
           local: './build/**'
           remote: ${{ secrets.SERVER_FOLDER }}
