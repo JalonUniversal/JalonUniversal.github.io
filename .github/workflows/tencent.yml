@@ -16,11 +16,13 @@ jobs:
         echo $GITHUB_WORKSPACE
 
     - name: Deploy To Tecent Axzure
-      uses: srueda99/scp-action@v12
+      uses: mdallasanta/ssh-scp-deploy@1.2.0
       with:
-          origin: ./build/*
-          port: 22
+          local: './build/**'
+          remote: ${{ secrets.SERVER_FOLDER }}
           host: ${{ secrets.SERVER_HOST }}
-          destination: ${{ secrets.SERVER_FOLDER }}
-          username: ${{ secrets.SERVER_USERNAME }}
-          password: ${{ secrets.SERVER_PASSWORD }}
+          user: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}  
+          port: 22
+
+          
