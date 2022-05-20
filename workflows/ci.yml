@@ -1,0 +1,21 @@
+name: React App Auto Deploy Flow
+on: [push, pull_request]
+
+jobs: 
+  workingflow-job:
+    name: react-app-workingflow
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout Branch
+      uses: actions/checkout@v3
+
+    - name: Install and Build
+      run: |
+        npm install
+        npm build
+
+    - name: Deploy
+      uses: JamesIves/github-pages-deploy-action@v4.3.3
+      with:
+        branch: gh-pages
+        folder: build
